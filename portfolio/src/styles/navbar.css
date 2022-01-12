@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* Selection of variables */
 :root {
   /* CSS HEX */
@@ -18,8 +12,15 @@
   --powder-blue: #caf0f8ff;
 }
 
-body {
-  background-color: var(--cerulean-crayola);
-  font-size: 62.5%;
-  font-family: "Public Sans", sans-serif;
+.navbar {
+  height: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--blue-green);
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav-link {
+  font-size: 1rem;
 }
