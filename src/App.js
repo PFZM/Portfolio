@@ -8,7 +8,6 @@ function App() {
   return (
     <div>
       <Header />
-      <Navbar />
       <ProyectContainer />
       <Footer />
     </div>
