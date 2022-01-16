@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import Resume from "./pages/Resume";
+import Skills from "./pages/Skills";
 import "../styles/proyectContainer.css";
 
 export default function ProyectContainer() {
@@ -16,8 +16,8 @@ export default function ProyectContainer() {
     if (currentPage === "Portfolio") {
       return <Portfolio />;
     }
-    if (currentPage === "Resume") {
-      return <Resume />;
+    if (currentPage === "Skills") {
+      return <Skills />;
     }
     return <Contact />;
   };

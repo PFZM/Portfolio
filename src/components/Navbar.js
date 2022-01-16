@@ -19,9 +19,9 @@ function Navbar({ currentPage, handlePageChange }) {
       href: "#contact",
     },
     {
-      title: "Resume",
-      pageName: "Resume",
-      href: "#resume",
+      title: "Skills",
+      pageName: "Skills",
+      href: "#skills",
     },
   ]);
 
