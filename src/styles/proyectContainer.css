@@ -10,3 +10,32 @@
 .about-me {
   text-align: justify;
 }
+
+.list-skills {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  margin: 20px;
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+form.form > * {
+  display: block;
+  border-radius: 0.3rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 1.5rem;
+  width: 50%;
+}
+
+.input-field {
+  padding: 0.8rem 0.5rem;
+}
+
+#message {
+  height: 5rem;
+}

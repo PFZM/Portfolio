@@ -21,6 +21,20 @@
   list-style-type: none;
 }
 
+.nav-item ::before {
+  content: "<";
+}
+
+.nav-item ::after {
+  content: "/>";
+}
+
 .nav-link {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: var(--powder-blue);
+  text-decoration: none;
+}
+
+.active {
+  color: var(--navy-blue);
 }

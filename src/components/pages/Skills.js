@@ -50,18 +50,22 @@ function Skills() {
     <div className="page">
       <h2 className="title">Skills</h2>
       <div className="list-skills">
-        <h3>Technical Skills</h3>
-        <ul>
-          {technicalSkills.map((technicalSkill) => (
-            <li>{technicalSkill.skill}</li>
-          ))}
-        </ul>
-        <h3>Non-Technical Skills</h3>
-        <ul>
-          {nonTecSkills.map((nonTecSkill) => (
-            <li>{nonTecSkill.skill}</li>
-          ))}
-        </ul>
+        <div>
+          <h3>Technical Skills</h3>
+          <ul>
+            {technicalSkills.map((technicalSkill) => (
+              <li>{technicalSkill.skill}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3>Non-Technical Skills</h3>
+          <ul>
+            {nonTecSkills.map((nonTecSkill) => (
+              <li>{nonTecSkill.skill}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
