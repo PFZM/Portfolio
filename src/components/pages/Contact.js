@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function Contact() {
-  // Here we set two state variables for firstName and lastName using `useState`
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -9,7 +8,15 @@ function Contact() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    return name === "firstName" ? setFirstName(value) : setLastName(value);
+    if (name === "firstName") {
+      return setFirstName(value);
+    } else if (name === "lastName") {
+      return setLastName(value);
+    } else if (name === "email") {
+      return setEmail(value);
+    } else if (name === "message") {
+      return setMessagge(value);
+    }
   };
 
   const handleFormSubmit = (e) => {
