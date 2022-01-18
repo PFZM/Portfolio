@@ -39,3 +39,9 @@ form.form > * {
 #message {
   height: 5rem;
 }
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
