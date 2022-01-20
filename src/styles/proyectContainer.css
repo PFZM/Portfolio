@@ -40,8 +40,27 @@ form.form > * {
   height: 5rem;
 }
 
-.card-container {
+.projects-container {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: wrap;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  border-style: solid;
+  margin: 2rem 1rem;
+}
+
+.card-container > span {
+  text-align: center;
+}
+
+.image-project {
+  width: 20em;
+  height: 10em;
+  padding: 1em;
 }

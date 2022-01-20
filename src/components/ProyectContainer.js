@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import About from "./pages/About";
-import Portfolio from "./pages/Portfolio";
-import Contact from "./pages/Contact";
-import Skills from "./pages/Skills";
+import About from "../pages/About";
+import Portfolio from "../pages/Portfolio";
+import Contact from "../pages/Contact";
+import Skills from "../pages/Skills";
 import "../styles/proyectContainer.css";
 
 export default function ProyectContainer() {

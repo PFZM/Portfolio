@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/proyectContainer.css";
+import "../styles/proyectContainer.css";
 
 export default function About() {
   return (

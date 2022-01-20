@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Skills() {
-  const [technicalSkills, setTechnicalSkills] = useState([
+  const technicalSkills = [
     {
       skill: "HTML",
     },
@@ -26,9 +26,9 @@ function Skills() {
     {
       skill: "NoSQL",
     },
-  ]);
+  ];
 
-  const [nonTecSkills, setNonTecSkills] = useState([
+  const nonTecSkills = [
     {
       skill: "Leadership",
     },
@@ -44,7 +44,7 @@ function Skills() {
     {
       skill: "Adaptability",
     },
-  ]);
+  ];
 
   return (
     <div className="page">

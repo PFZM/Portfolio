@@ -1,48 +1,59 @@
 import React, { useState } from "react";
 
+import pilotLog from "../assets/images/pilotLog.png";
+import coffeeMate from "../assets/images/coffeeMate.png";
+import noteTaker from "../assets/images/noteTaker.png";
+import socialMediaApi from "../assets/images/socialMediaApi.png";
+
 function Portfolio() {
-  const [proyects, setProyects] = useState([
+  const proyects = [
     {
       name: "Pilot Log",
-      image: "../../assets/images/Pilot_Log.png",
+      image: pilotLog,
       alt: "Pilot Log App",
       urlApp: "https://pilots-logbook.herokuapp.com/",
       urlRepo: "https://github.com/PFZM/Pilot-Log",
     },
     {
       name: "Coffe-mate",
-      image: "../src/assets/images/Coffe_Mate.png",
+      image: coffeeMate,
       alt: "Coffee-mate App",
       urlApp: "https://pfzm.github.io/Coffee-mate/",
       urlRepo: "https://github.com/PFZM/Coffee-mate",
     },
     {
       name: "Note Taker",
-      image: "../src/assets/images/Note taker.png",
+      image: noteTaker,
       alt: "Note Taker App",
       urlApp: "https://github.com/PFZM/Note_Taker",
       urlRepo: "https://note-taker-pfzm.herokuapp.com/",
     },
     {
       name: "Social Network API",
-      image: "../src/assets/images/Social_Media_API.png",
+      image: socialMediaApi,
       alt: "Social Network API App",
       urlApp: "https://youtu.be/ou4tpGU7xIQ",
       urlRepo: "https://github.com/PFZM/Social_Network_API",
     },
-  ]);
+  ];
 
   return (
     <div className="page">
       <h1 className="title">Portfolio - Projects</h1>
-      {proyects.map((project) => (
-        <card className="card-container">
-          {project.name}
-          <img src={project.image} alt={project.alt} />
-          <a href={project.urlApp}>Application</a>
-          <a href={project.urlRepo}>Github Repo</a>
-        </card>
-      ))}
+      <div className="projects-container">
+        {proyects.map((project) => (
+          <div className="card-container">
+            <span>{project.name}</span>
+            <img
+              className="image-project"
+              src={project.image}
+              alt={project.alt}
+            />
+            <a href={project.urlApp}>Application</a>
+            <a href={project.urlRepo}>Github Repo</a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
