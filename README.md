@@ -4,7 +4,7 @@
 
 ## Link to see the deployed page:
 
-[React Portfolio](https://github.com/PFZM/Portfolio)
+[React Portfolio](https://pfzm.github.io/Portfolio/)
 
 ## Description
 
