@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Skills() {
   const technicalSkills = [
@@ -50,19 +50,19 @@ function Skills() {
     <div className="page">
       <h2 className="title">Skills</h2>
       <div className="list-skills">
-        <div>
+        <div className="div-list">
           <h3>Technical Skills</h3>
-          <ul>
+          <ul className="individual-list">
             {technicalSkills.map((technicalSkill) => (
-              <li>{technicalSkill.skill}</li>
+              <li key={technicalSkill.skill}>{technicalSkill.skill}</li>
             ))}
           </ul>
         </div>
-        <div>
+        <div className="div-list">
           <h3>Non-Technical Skills</h3>
-          <ul>
+          <ul className="individual-list">
             {nonTecSkills.map((nonTecSkill) => (
-              <li>{nonTecSkill.skill}</li>
+              <li key={nonTecSkill.skill}>{nonTecSkill.skill}</li>
             ))}
           </ul>
         </div>

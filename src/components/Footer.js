@@ -1,42 +1,58 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/footer.css";
 import { FaGithub, FaWhatsappSquare, FaRegFilePdf } from "react-icons/fa";
 import { GrLinkedin } from "react-icons/gr";
 import { HiOutlineMail } from "react-icons/hi";
+import { useLocation } from "react-router-dom";
 
-const Footer = () => {
-  const [footerLinks, setFooterLinks] = useState([
+const Footer = (props) => {
+  const location = useLocation();
+
+  function isFooterFixed() {
+    return location.pathname !== "/portfolio";
+  }
+
+  const footerLinks = [
     {
       href: "https://github.com/PFZM",
-      icon: <FaGithub />,
+      icon: <FaGithub size={40} color={"#caf0f8ff"} />,
     },
     {
       href: "https://www.linkedin.com/in/pablo-zambrano/",
-      icon: <GrLinkedin />,
+      icon: <GrLinkedin size={40} color={"#caf0f8ff"} />,
     },
     {
       href: "mailto:pfzm@hotmail.com",
-      icon: <HiOutlineMail />,
+      icon: <HiOutlineMail size={40} color={"#caf0f8ff"} />,
     },
     {
       href: "http://wa.me/610450726664",
       target: "_blank",
-      icon: <FaWhatsappSquare />,
+      icon: <FaWhatsappSquare size={40} color={"#caf0f8ff"} />,
     },
     {
       href: "../assets/Pablo_Zambrano_Resume.pdf",
       text: "Resume",
-      icon: <FaRegFilePdf />,
+      icon: <FaRegFilePdf size={40} color={"#caf0f8ff"} />,
     },
-  ]);
+  ];
 
   return (
-    <footer className="footer">
+    <footer
+      className="footer"
+      style={{ position: isFooterFixed() ? "fixed" : "static" }}
+    >
       <h2>Connect with me!</h2>
-      <div class="contact-links">
+      <div className="contact-links">
         {footerLinks.map((footerLink) => (
-          <a href={footerLink.href} target={footerLink.target}>
-            {footerLink.text}
+          <a
+            key={footerLink.href}
+            href={footerLink.href}
+            target={footerLink.target}
+          >
+            <span style={{ fontSize: "1rem", color: "#caf0f8ff" }}>
+              {footerLink.text}
+            </span>
             {footerLink.icon}
           </a>
         ))}

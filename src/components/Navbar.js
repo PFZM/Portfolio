@@ -1,43 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 
-function Navbar({ currentPage, handlePageChange }) {
-  const [navItems, setNavItems] = useState([
+function Navbar({ currentPage }) {
+  const navItems = [
     {
       title: "About me",
       pageName: "About",
-      href: "#about",
+      href: "/",
     },
     {
       title: "Portfolio",
       pageName: "Portfolio",
-      href: "#portfolio",
+      href: "/portfolio",
     },
     {
       title: "Contact",
       pageName: "Contact",
-      href: "#contact",
+      href: "/contact",
     },
     {
       title: "Skills",
       pageName: "Skills",
-      href: "#skills",
+      href: "/skills",
     },
-  ]);
+  ];
 
   return (
     <ul className="navbar">
       {navItems.map((navItem) => (
-        <li className="nav-item">
-          <a
-            href={navItem.href}
-            onClick={() => handlePageChange(navItem.pageName)}
+        <li key={navItem.title} className="nav-item">
+          <Link
+            to={navItem.href}
             className={
               currentPage === navItem.pageName ? "nav-link active" : "nav-link"
             }
           >
             {navItem.title}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

@@ -1,3 +1,16 @@
+:root {
+  /* CSS HEX */
+  --navy-blue: #03045eff;
+  --dark-cornflower-blue: #023e8aff;
+  --star-command-blue: #0077b6ff;
+  --blue-green: #0096c7ff;
+  --cerulean-crayola: #00b4d8ff;
+  --sky-blue-crayola: #48cae4ff;
+  --sky-blue-crayola-2: #90e0efff;
+  --blizzard-blue: #ade8f4ff;
+  --powder-blue: #caf0f8ff;
+}
+
 .page {
   font-size: 1.2rem;
   padding: 1rem 8rem;
@@ -16,14 +29,27 @@
   justify-content: space-around;
 }
 
+.div-list {
+  padding: 2rem 2rem;
+}
+
+.individual-list {
+  padding-top: 0.5rem;
+}
+
+.hi {
+  text-align: center;
+}
+
 .form {
   margin: 20px;
   border-radius: 5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-form.form > * {
+.form > * {
   display: block;
   border-radius: 0.3rem;
   margin-top: 5px;
@@ -43,7 +69,7 @@ form.form > * {
 .projects-container {
   display: flex;
   justify-content: space-evenly;
-  flex-direction: wrap;
+  flex-wrap: wrap;
 }
 
 .card-container {
@@ -52,7 +78,13 @@ form.form > * {
   justify-content: space-evenly;
   flex-wrap: wrap;
   border-style: solid;
+  border-radius: 5%;
+  background-color: var(--sky-blue-crayola-2);
   margin: 2rem 1rem;
+}
+
+.project-name {
+  padding-top: 1rem;
 }
 
 .card-container > span {
@@ -63,4 +95,18 @@ form.form > * {
   width: 20em;
   height: 10em;
   padding: 1em;
+}
+
+.card-links {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--dark-cornflower-blue);
+}
+
+.card-links ::before {
+  content: "<";
+}
+
+.card-links ::after {
+  content: "/>";
 }

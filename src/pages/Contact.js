@@ -31,7 +31,7 @@ function Contact() {
   return (
     <div className="page">
       <h2 className="title">Contact Me</h2>
-      <p>Hi {firstName}!</p>
+      <p className="hi">Hi {firstName}!</p>
       <form className="form">
         <input
           className="input-field"

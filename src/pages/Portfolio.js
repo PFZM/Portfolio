@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import pilotLog from "../assets/images/pilotLog.png";
 import coffeeMate from "../assets/images/coffeeMate.png";
@@ -39,18 +39,22 @@ function Portfolio() {
 
   return (
     <div className="page">
-      <h1 className="title">Portfolio - Projects</h1>
+      <h2 className="title">Portfolio - Projects</h2>
       <div className="projects-container">
         {proyects.map((project) => (
-          <div className="card-container">
-            <span>{project.name}</span>
+          <div key={project.name} className="card-container">
+            <span className="project-name">{project.name}</span>
             <img
               className="image-project"
               src={project.image}
               alt={project.alt}
             />
-            <a href={project.urlApp}>Application</a>
-            <a href={project.urlRepo}>Github Repo</a>
+            <a className="card-links" href={project.urlApp}>
+              Application - Link
+            </a>
+            <a className="card-links" href={project.urlRepo}>
+              Github Repo
+            </a>
           </div>
         ))}
       </div>
