@@ -7,12 +7,12 @@ function Navbar({ currentPage }) {
     {
       title: "About me",
       pageName: "About",
-      href: "/",
+      href: "/Portfolio",
     },
     {
       title: "Portfolio",
       pageName: "Portfolio",
-      href: "/portfolio",
+      href: "/proyects",
     },
     {
       title: "Contact",

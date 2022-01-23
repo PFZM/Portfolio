@@ -9,9 +9,15 @@ const Footer = (props) => {
   const location = useLocation();
 
   function isFooterFixed() {
-    return location.pathname !== "/portfolio";
+    if (
+      location.pathname === "/proyects" ||
+      location.pathname === "/Portfolio"
+    ) {
+      return "static";
+    } else {
+      return "fixed";
+    }
   }
-
   const footerLinks = [
     {
       href: "https://github.com/PFZM",
@@ -38,10 +44,7 @@ const Footer = (props) => {
   ];
 
   return (
-    <footer
-      className="footer"
-      style={{ position: isFooterFixed() ? "fixed" : "static" }}
-    >
+    <footer className="footer" style={{ position: isFooterFixed() }}>
       <h2>Connect with me!</h2>
       <div className="contact-links">
         {footerLinks.map((footerLink) => (
